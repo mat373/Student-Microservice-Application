@@ -13,13 +13,9 @@ The application allows you to add students and courses as well as enrollment in 
 
 The applications use Swagger. Run the Student-Microservice-Application and check:
 
-Documentation for student-service
+Documentation for student-service and course-service
 ```bash
-http://localhost:8080/swagger-ui.html
-```
-Documentation for course-service
-```bash
-http://localhost:8087/swagger-ui.html
+http://localhost:9000/swagger-ui.html
 ```
 
 ## Run
