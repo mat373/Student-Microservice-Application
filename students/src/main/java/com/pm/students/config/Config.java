@@ -1,8 +1,5 @@
-package com.pm.courses.config;
+package com.pm.students.config;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
-import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -21,7 +18,7 @@ public class Config {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.pm.courses"))
+                .apis(RequestHandlerSelectors.basePackage("com.pm.students"))
                 .paths(PathSelectors.any())
                 .build().apiInfo(apiInfo());
     }
@@ -32,11 +29,5 @@ public class Config {
                 .title("Student Application Api doc")
                 .description("Documentation auto generated")
                 .build();
-    }
-
-    @Bean
-    public MessageConverter messageConverter(){
-        ObjectMapper mapper = new ObjectMapper().findAndRegisterModules();
-        return new Jackson2JsonMessageConverter(mapper);
     }
 }
