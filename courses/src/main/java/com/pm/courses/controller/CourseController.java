@@ -4,6 +4,8 @@ import com.pm.courses.model.Course;
 import com.pm.courses.model.Status;
 import com.pm.courses.model.Student;
 import com.pm.courses.service.CourseService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +25,7 @@ public class CourseController {
     }
 
     @GetMapping
+    @ApiOperation(value = "List of all courses", notes = "Will get all the courses")
     public List<Course> getCourses(@RequestParam(required = false)Status status) {
        return courseService.getCoursesByStatus(status);
     }
