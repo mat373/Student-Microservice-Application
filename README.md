@@ -21,3 +21,10 @@ Documentation for course-service
 ```bash
 http://localhost:8087/swagger-ui.html
 ```
+
+## Run
+```
+git clone https://github.com/mat373/Student-Microservice-Application.git
+import maven dependencies
+```
+
