@@ -25,6 +25,8 @@ http://localhost:8087/swagger-ui.html
 ## Run
 ```
 git clone https://github.com/mat373/Student-Microservice-Application.git
-import maven dependencies
 ```
+- import maven dependencies
+- Multirun configuration will be detected
+- Run all application in the given order
 
